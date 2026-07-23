@@ -1,51 +1,50 @@
-☀️ PM Surya Ghar Muft Bijli Yojana: Data Analytics Pipeline
-
-📌Project Overview
-This project focuses on performing an end-to-end data analysis pipeline on the PM Surya Ghar Muft Bijli Yojana (National Rooftop Solar Scheme) dataset. The data encompasses national application volumes, completion rates, pending backlogs, financial subsidies, and technical capacities across various states and districts. The goal is to clean unstructured operational metrics, evaluate execution efficiency, and uncover regional bottlenecks to provide data-driven recommendations for accelerating solar adoption.
+☀️ PM Surya Ghar: Muft Bijli Yojana Analysis
+📌 Project Overview
+This project focuses on performing an end-to-end data analysis pipeline on the PM Surya Ghar Muft Bijli Yojana (National Rooftop Solar Scheme) dataset. The goal is to clean unstructured operational data, evaluate execution efficiency across states and districts, and uncover regional supply chain bottlenecks to help accelerate solar adoption.
 
 🛠 Tools Used
-Microsoft Excel: For initial data pre-processing, data hygiene, and flat-file validation.
+Microsoft Excel: For initial data pre-processing and removing structural anomalies.
 
-MS SQL Server (T-SQL): For database schema modification, text-to-numeric casting (TRY_CAST, REPLACE), and advanced analytical modeling (CTEs, Window Functions).
+MS SQL Server (T-SQL): For data type casting (TRY_CAST), handling string modifications, and advanced query analysis (CTEs, Window Functions).
 
-Power BI: For relational data modeling, DAX structural engineering, and building an interactive executive dashboard.
+Power BI: For building the interactive executive dashboard and calculating core DAX metrics.
 
 🎯 Key Analysis Performed
-Schema Optimization: Cleaned raw string fields containing percentage symbols (%) and converted them into indexable floating-point metrics.
+Cleaned raw panel efficiency text data and converted it into usable float formats.
 
-National Performance Baseline: Generated macro-level KPIs including Total Applications (7.31M), Installations (3M), Total Capacity (12.55M KW), and Total Subsidies (₹23.61K).
+Calculated national baseline KPIs (Total Applications, Installations, Subsidies, and Capacity).
 
-Volume Leader Tracking: Identified the Top 3 and Bottom 3 states based on absolute application intake and deployment volume.
+Identified top and bottom 3 states based on absolute application and installation volumes.
 
-Operational Choke Point Discovery: Isolated large-scale states (>50,000 applications) demonstrating critical execution inefficiencies (efficiency under 40%).
+Isolated large-scale states with massive demand but weak installation efficiency (under 40%).
 
-Micro-Market Micro-Partitioning: Utilized advanced database partitioning (RANK() OVER) to extract the top 2 highest-performing districts within every individual state.
+Extracted the top 2 highest-performing districts within each individual state using RANK() OVER.
 
-Risk Assessment Analysis: Mapped and flagged specific administrative districts containing active application volumes but zero completed installations.
+Mapped specific high-risk districts with zero completed installations despite active applications.
 
-Capacity Grid Density: Calculated the average installed solar capacity per household across individual regions to evaluate local grid contribution styles.
+Computed the average solar capacity installed per household across different states.
 
 📊 Key Insights
-The National Backlog Challenge: While public interest is massive (7.31M applications), the national installation efficiency sits at 47.71%, leaving a heavy backlog of 4 Million pending installations.
+The National Backlog: Public interest is massive (7.31M applications), but the national installation efficiency stands at just 47.71%, leaving a backlog of 4 million pending setups.
 
-The Andhra Pradesh Bottleneck (Critical Insight): The dashboard clearly highlights Andhra Pradesh as the state with the most severe backlog crisis. Despite crossing the 1 million application milestone, it has a staggering 83.16% pending rate, meaning only 16.84% of received applications have successfully transitioned to completed installations.
+The Andhra Pradesh Bottleneck: Andhra Pradesh has the worst backlog crisis in India. Despite crossing 1 million applications, it has a staggering 83.16% pending rate (only 16.84% of applications are successfully installed).
 
-Regional Powerhouses: Gujarat, Maharashtra, and Uttar Pradesh are the primary growth engines. Gujarat leads the capacity charts, while Maharashtra has the highest overall application interest (1,339.35K).
+Top Performers: Gujarat, Maharashtra, and Uttar Pradesh act as the primary growth engines, dominating capacity (MW) and subsidy absorption.
 
-Micro-Market Hotspots: At the district level, localized hubs like Lucknow, Nagpur, Surat, and Ahmedabad lead the country in successful rooftop deployment.
+Micro-Market Leaders: At the district level, urban hubs like Lucknow, Nagpur, Surat, and Ahmedabad are executing installations the fastest.
 
 💡 Recommendations
-Target Backlog Hotspots: Administrative focus and technical field teams should be dynamically shifted to Andhra Pradesh to address the massive 83% backlog and clear localized supply chain or verification blockages.
+Clear the AP Bottleneck: Shift field installation teams and technical resources dynamically to Andhra Pradesh to resolve its 83% pending setup crisis.
 
-Standardize Operational Playbooks: Analyze the approval and installation workflows of high-performing hubs like Gujarat and Lucknow to create a standardized template that can be implemented in slow-moving states.
+Standardize Workflows: Study the fast-track approval playbooks used in high-performing areas like Gujarat and Lucknow to implement them in lagging states.
 
-Automated Threshold Alerts: Implement a tracking system that flags any district or state as a "High-Risk Zone" the moment its pending installation rate crosses 60%, allowing management to intervene early.
+Risk Flagging: Build an automated tracker to flag any district the moment its pending installation rate crosses a 60% threshold for early intervention.
 
 📁 Files Included
-pm_surya_analysis.sql: T-SQL script containing all structural modifications, aggregations, and window functions.
+pm_surya_analysis.sql: SQL script containing all structural modifications, aggregations, and window functions.
 
-pm_surya_cleaned.xlsx: Structured clean source dataset post Excel pre-processing.
+pm_surya_cleaned.xlsx: Cleaned source dataset post Excel pre-processing.
 
-pm_surya_dashboard.pbix: Interactive Power BI dashboard file tracking the complete program layout.
+pm_surya_dashboard.pbix: Interactive Power BI dashboard file.
 
-dashboard_preview.png: High-resolution dashboard interface capture (displayed below).
+dashboard_preview.png: Screenshot of the Power BI dashboard layout.
